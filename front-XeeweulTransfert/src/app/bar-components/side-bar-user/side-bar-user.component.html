@@ -1,0 +1,45 @@
+<div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/assets/img/sidebar-1.jpg">
+  <div class="logo">
+    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      Creative Tim
+    </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item active  ">
+        <a class="nav-link">
+          <i class="material-icons">dashboard</i>
+          <p>Menu</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#"  class="nav-link" routerLink="/envoie" routerLinkActive="active">
+          <i class="material-icons">person</i>
+          <p>Faire un envoie</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#"   class="nav-link" routerLink="/retrait" routerLinkActive="active">
+          <i class="material-icons">content_paste</i>
+          <p>Faire un retrait</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link" routerLink="/operations" routerLinkActive="active" >
+          <i class="material-icons">bubble_chart</i>
+          <p>Liste Transactions Effectuées </p>
+        </a>
+      </li>
+
+    
+      <li>
+          <a class="nav-link">
+            <i class="material-icons"></i>
+            <p> <a (click)="logout()">Deconnexion </a> </p>
+          </a>
+        </li>
+  
+  
+    </ul>
+  </div>
+</div>

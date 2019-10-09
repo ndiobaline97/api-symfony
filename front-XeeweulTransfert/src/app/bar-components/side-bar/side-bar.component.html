@@ -1,0 +1,46 @@
+
+
+ <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/assets/img/sidebar-1.jpg">
+  <div class="logo">
+    <a href="#">
+      Xeweul Transfert
+    </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item active">
+        <a class="nav-link">
+          <i class="material-icons">dashboard</i>
+          <p>Menu</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#"  class="nav-link" routerLink="/register" routerLinkActive="active">
+          <i class="material-icons">person</i>
+          <p>Ajouter Partenaire</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#"   class="nav-link" routerLink="/listepartenaire" routerLinkActive="active">
+          <i class="material-icons">content_paste</i>
+          <p>Liste Partenaire</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="#" class="nav-link" routerLink="/ajoutercompte" routerLinkActive="active" >
+          <i class="material-icons">bubble_chart</i>
+          <p>Ajouter Compte</p>
+        </a>
+      </li>
+  
+      <li>
+          <a class="nav-link">
+            <i class="material-icons"></i>
+            <p> <a (click)="logout()">Deconnexion </a> </p>
+          </a>
+        </li>
+  
+
+    </ul>
+  </div>
+</div>

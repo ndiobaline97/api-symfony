@@ -1,0 +1,71 @@
+<app-nav-bar></app-nav-bar>
+ <div class="wrapper ">
+    <app-side-bar></app-side-bar>
+          <div class="main-panel">
+            
+            <div class="content">
+              <div class="container-fluid">
+                  <div class="card-body">
+                    <form #imageForm=ngForm (ngSubmit)="onsubmit(imageForm.value)">
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">NINEA</label>
+                          <input type="texte" class="form-control  rounded-0" name="ninea" #ninea ngModel required="required"
+                            placeholder="NINEA">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">ENTREPRISE</label>
+                          <input type="texte" class="form-control rounded-0" id="exampleFormControlInput1"
+                            placeholder="entreprise" name="entreprise" #entreprise required="required"  ngModel>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">ADRESSE</label>
+                          <input type="texte" class="form-control  rounded-0" id="exampleFormControlInput1"
+                            placeholder="Adresse" name="adresse"  ngModel>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">TELEPHONE</label>
+                          <input type="number" #telephone ngModel required="required" min=700000000 max=800000000 name="telephone"  class="form-control  rounded-0" id="exampleFormControlInput1"
+                            placeholder="Telephone" name="telephone">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">EMAIL </label>
+                          <input type="email" class="form-control  rounded-0" id="exampleFormControlInput1"
+                            placeholder="name@example.com" name="email"  ngModel>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Login</label>
+                          <input type="text" #username ngModel required="required" name="username" class="form-control" id="username"  class="form-control  rounded-0"
+                            placeholder="Login">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Password</label>
+                            <input type="password" class="form-control  rounded-0" id="exampleFormControlInput1"
+                              placeholder="Password" name="plainPassword" #plainPassword  ngModel>
+                          </div>
+        
+                         <div class="form-group">
+                            <div class="col">
+                                <img alt="" [src]="imageUrl"  style="width: 250px; height:200px">
+        
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"  name="photo" #photo ngModel name="photo" #photo ngModel  #Image accept="image/" (change)="handleFileInput($event.target.files)">
+                              <label class="custom-file-label" for="inputGroupFile01">Choisir une image</label>
+                            </div>
+                        </div> 
+        
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-lightning rounded-0 mb-2 mr-2">Ajouter</button>
+                        </div>
+                      </form>
+
+                    </div>
+
+                <router-outlet></router-outlet>
+               
+              </div>
+            </div>
+       <app-footer></app-footer>
+          </div>
+        </div>

@@ -1,0 +1,212 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper ">
+  <app-side-bar-user> </app-side-bar-user>
+  <div class="main-panel">
+
+    <div class="content">
+      <div class="container-fluid">
+        <h2 class="form-title">Effectuer un envoie</h2>
+
+        <form #envoie=ngForm (ngSubmit)="onsubmit(envoie.value)">
+
+          <div class="row justify-content-center">
+            <fieldset class="col-10 col-md-8 px-3">
+              <legend>EXPEDITEUR</legend>
+              <div class="row justify-content-center">
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="price">PRENOM EXPEDITEUR</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #prenomE ngModel type="text" name="prenomE" id="price" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">NOM EXPEDITEUR</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #nomE ngModel type="text" name="nomE" id="price" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">TELEPHONE EXPEDITEUR</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #telephoneE ngModel type="number" name="telephoneE" id="price" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">TYPE PIECE EXPEDITEUR</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <select class="form-control" #typePiece ngModel name="typePiece">
+                      <option value="CIN">CIN</option>
+                      <option value="Passeport">Passeport</option>
+                      <option value="Permis">Permis de Conduire</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">NUMERO PIECE EXPEDITEUR</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #numeroPiece ngModel type="text" name="numPiece" id="price" class="form-control" required>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+          <div class="row justify-content-center">
+            <fieldset class="col-10 col-md-8 px-3">
+              <legend>BENEFICIAIRE</legend>
+              <div class="row justify-content-center">
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="price">PRENOM BENEFICIAIRE</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #prenomB ngModel type="text" name="prenomB" id="price" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">NOM BENEFICIAIRE</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #nomB ngModel type="text" name="nomB" id="price" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="cost">TELEPHONE BENEFICIAIRE</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #telephoneB ngModel type="number" name="telephoneB" id="price" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="row justify-content-center">
+            <fieldset class="col-10 col-md-8 px-3">
+              <legend>TRANSACTION</legend>
+              <div class="row justify-content-center">
+                <div class="form-group col-sm-9 col-lg-6">
+                  <label class="pt-2" for="price">MONTANT</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                    </div>
+                    <input #montant ngModel type="number" name="montant" id="price" class="form-control" required>
+                  </div>
+                </div>
+                <!-- <div class="form-group col-sm-9 col-lg-6">
+                                    <label class="pt-2" for="price">FRAIS</label>
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-usd"></i></div>
+                                      </div>
+                                       <input type="number" name="price" id="price" class="form-control">
+                                    </div>
+                                  </div> -->
+
+
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-group row col-6 col-md-push-4 offset-md-3">
+            <div class="col">
+              <button type="submit" name="valider" class="btn btn-primary">AJOUTER</button>
+            </div>
+          </div>
+
+          <!-- <h1 align="center"> INFORMATION ENVOYEUR</h1>
+
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Prenom Expediteur</label>
+        <div class="col">
+        <input type="text" #prenom ngModel required="required" name="prenom" class="form-control" id="username" placeholder="Prenom Expediteur">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Nom Expediteur</label>
+        <div class="col">
+        <input type="text" #nom ngModel required="required" name="nom" class="form-control" id="username" placeholder="Nom Expediteur">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Type Piece</label>
+        <div class="col">
+        <select class="form-control" #typePiece ngModel name="typePiece">
+                <option  value="CIN">CIN</option>
+                <option  value="Passeport">Passeport</option>
+                <option  value="Permis">Permis de Conduire</option>
+
+        </select>
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Numero Piece</label>
+        <div class="col">
+        <input type="number" #numeroPiece ngModel required="required"  name="numeroPiece" class="form-control" id="inputPassword3" placeholder="Numero de Piéce">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Telephone Expediteur</label>
+        <div class="col">
+        <input type="number" #telephone ngModel required="required" min=700000000 max=800000000 name="telephone" class="form-control" id="inputPassword3" placeholder="Téléphone">
+        </div>
+    </div>
+    
+    <h1 align="center"> INFORMATION BÉNÉFICIAIRE</h1>
+
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Prenom Destinataire</label>
+        <div class="col">
+        <input type="text" #prenomb ngModel required="required" name="prenomb" class="form-control" id="username" placeholder="Prenom Bénéficiaire">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Nom Destinataire</label>
+        <div class="col">
+        <input type="text" #nomb ngModel required="required" name="nomb" class="form-control" id="username" placeholder="Nom Bénéficiaire">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Telephone Destinataire</label>
+        <div class="col">
+        <input type="number" #telephoneb ngModel required="required" min=700000000 max=800000000 name="telephoneb" class="form-control" id="inputPassword3" placeholder="Téléphone Bénéficiaire">
+        </div>
+    </div>
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Montant</label>
+        <div class="col">
+        <input type="number" #montant ngModel required="required"  name="montant" class="form-control" id="inputPassword3" placeholder="Montant ">
+        </div>
+    </div>
+
+    <div class="form-group row col-6 col-md-push-4 offset-md-3">
+        <div class="col">
+        <button type="submit" name="valider" class="btn btn-primary" >AJOUTER</button>
+        </div>
+    </div> -->
+        </form>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

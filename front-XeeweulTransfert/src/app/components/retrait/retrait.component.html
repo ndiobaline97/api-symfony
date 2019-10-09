@@ -1,0 +1,56 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper ">
+  <app-side-bar-user> </app-side-bar-user>
+  <div class="main-panel">
+
+    <div class="content">
+      <div class="container-fluid">
+        <h2 class="form-title">Retrait Argent</h2> 
+        <div class="col-lg-6">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Vérification de code</h6>
+            </div>
+            <div class="card-body">
+              <form class="formcode"  #c=ngForm (ngSubmit)="rechercheCode(c.value)" >
+                <div class="form-group montant" >
+                  <input type="text" required class="form-control form-control-user codetrans" #codeEnvoie ngModel name="codeEnvoie" placeholder="Vérification code transaction">
+                </div>
+                <div class = "code">
+                  <button  type="submit" class="btn btn-primary btn-user btn-block" >Vérifiez</button>
+                </div>
+              </form>  
+
+              <!--  -->
+              <form class="formcode"  *ngIf="affiche==true"   #c=ngForm (ngSubmit)="retrait(c.value)" >
+                <div class="form-group montant" >
+                  <input type="text" #codeEnvoie ngModel name="codeEnvoie" class="form-control form-control-user codetrans"  placeholder="confirmation code transaction">
+                </div>
+                <br>
+                <div class="form-group montant" >
+                  <select class="form-control" #typePieceB ngModel name="typePieceB">
+                    <option value="CNI">CNI</option>
+                    <option value="Passeport">Passeport</option>
+                    <option value="Permis">Permis de Conduire</option>
+
+                  </select>
+                </div>
+                <div class="form-group montant" >
+                  <input type="text" #numPieceB ngModel name="numPieceB" class="form-control form-control-user codetrans"  placeholder="CIN Bénéficiaire">
+                </div>
+                <div class = "code">
+                  <button  type="submit" class="btn btn-primary btn-user btn-block" (click)="retrait()">Retirez</button>
+                </div>
+              </form>  
+                  
+            </div>
+          </div>
+
+        </div>
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

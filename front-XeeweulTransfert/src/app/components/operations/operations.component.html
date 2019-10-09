@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+ <div class="wrapper ">
+  <app-side-bar-user> </app-side-bar-user> 
+          <div class="main-panel">
+            
+            <div class="content">
+              <div class="container-fluid">
+                  <div class="panel panel-default">
+                      <div class="panel-heading"> <h3 align="center">Liste des Opérations</h3></div>
+                      <div class="panel-body">
+                    <table class="table">
+                      <tr class="table-info">
+                        <th>Id Opération</th>
+                        <th >Nom Expéditeur</th>                         
+                        <th>Prenom Expediteur</th>
+                        <th>Adresse Expediteur</th>
+                        <th>Telephone Expediteur</th>
+                        <th>codeEnvoie</th>
+                        <th>Nom Bénéficiaire</th>
+                        <th>Prenom Bénéficiaire</th>
+                        <th>Adresse Bénéficiaire</th>
+                        <th>Téléphone Bénéficiaire</th>
+                        <th>EtatCode</th>
+                      </tr>
+                      <tr *ngFor="let util of operations" >
+
+                          <td>{{util.id}}</td>
+                          <td>{{util.nomE}}</td>
+                          <td>{{util.prenomE}}</td>
+                          <td>{{util.adresse}}</td>
+                          <td>{{util.telephoneE}}</td>
+                          <td>{{util.codeEnvoie}}</td>
+                          <td>{{util.nomB}}</td>
+                          <td>{{util.prenomB}}</td>
+                          <td>{{util.adresseB}}</td>
+                          <td>{{util.telephoneB}}</td>
+                          <td>{{util.etatCode}}</td>
+
+                      </tr>
+                    </table>
+                <router-outlet></router-outlet>
+               
+              </div>
+            </div>
+       <app-footer></app-footer>
+          </div>
+        </div>

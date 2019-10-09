@@ -1,0 +1,4 @@
+ <div class="col">
+                                  <img alt="" [src]="imageUrl"  style="width: 250px; height:200px">
+          
+                              </div>

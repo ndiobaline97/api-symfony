@@ -1,0 +1,31 @@
+<app-nav-bar></app-nav-bar>
+ <div class="wrapper ">
+  <app-side-bar-caissier> </app-side-bar-caissier> 
+          <div class="main-panel">
+            
+            <div class="content">
+              <div class="container-fluid">
+                    <h1>Effectuer un Dépot</h1>
+                  <div>
+                    <form #d=ngForm (ngSubmit)="submitcompte(d.value)">
+
+                      <div class="form-group row col-6 col-md-push-4 offset-md-3">
+                          <label for="inputPassword3" class="col-sm-2 col-form-label">Compte</label>
+                          <div class="col">
+                          <input type="text" #numeroCompte ngModel required="required" name="numeroCompte" class="form-control" id="inputPassword3" placeholder="Numero de Compte" >
+                          </div>
+                      </div>
+                      <div class="form-group row col-6 col-md-push-4 offset-md-3">
+                          <div class="col">
+                          <button type="submit" name="valider" class="btn btn-primary">RECHERCHER COMPTE</button>
+                          </div>
+                      </div>
+                      </form>
+                  </div>          
+                <router-outlet></router-outlet>
+               
+              </div>
+            </div>
+       <app-footer></app-footer>
+          </div>
+        </div>

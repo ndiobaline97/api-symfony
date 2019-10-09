@@ -1,0 +1,46 @@
+<app-nav-bar></app-nav-bar>
+ <div class="wrapper ">
+  <app-side-bar-adminp> </app-side-bar-adminp> 
+          <div class="main-panel">
+            
+            <div class="content">
+              <div class="container-fluid">
+                   
+                    <div class="panel panel-default">
+                      <div class="panel-heading"> <h3 align="center">Liste des Utilisateurs</h3></div>
+                      <div class="panel-body">
+                        <table class="table">
+                          <tr class="table-info">
+                            <th >Id</th>
+                            <th >Username</th>                         
+                            <th>Telephone</th>
+                            <th>Rôle</th>
+                            <th>Partenaire</th>
+                            <th>Statut</th>
+
+                          </tr>
+                          <tr *ngFor="let util of users" >
+
+                                  <td>{{util.id}}</td>
+                              <td>{{util.username}}</td>
+                              <td>{{util.partenaire.telephone}}</td>
+                              <td>{{util.roles}}</td>
+                              <td>{{util.partenaire.entreprise}}</td>
+                              <td> <button type="button" [ngClass]="{
+                                'btn btn-success': util.statut=='actif',
+                                  'btn-danger': util.statut=='bloquer'
+                                  }"(click)="blocker(util.id)">
+                                  {{util.statut}}</button>
+                              </td>
+                  
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                <router-outlet></router-outlet>
+               
+              </div>
+            </div>
+       <app-footer></app-footer>
+          </div>
+        </div>
